@@ -1,23 +1,33 @@
 h1 a, h2 a {
-    color: #C25100;
-    font-family: 'Roboto Mono', monospace;
+    color: #aaf0c0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+    color: #aaf0c0;
+}
+
+a:hover {
+    color: #aaf0c0;
+    text-decoration: underline;
 }
 
 body {
-    padding-left: 15px;
+    background-color: #000000;
+    padding: 15px;
 }
 
 .page-header {
-    background-color: #C25100;
+    color: #ffffff;
     margin-top: 0;
     margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
 }
 
 .page-header h1,
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
+    font-family: 'Redressed', cursive;
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
@@ -26,12 +36,29 @@ body {
 h1,
 h2,
 h3,
-h4 {
-    font-family: 'Roboto Mono', monospace;
+h4,
+p {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.comment {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    border-color: #ffffff;
+    border-style: dashed;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.comment > time,
+.comment > .actions {
+    float: right;
 }
 
 .date {
-    color: #828282;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .save {
@@ -53,12 +80,12 @@ h4 {
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .post h2 a,
 .post h2 a:visited {
-    color: #000000;
+    color: #aaf0c0;
 }
 
 .post > .date,
@@ -68,16 +95,13 @@ h4 {
 
 .btn-default,
 .btn-default:visited {
-    color: #C25100;
+    color: #ffffff;
     background: none;
-    border-color: #C25100;
+    border-color: #ffffff;
 }
 
 .btn-default:hover {
-    color: #FFFFFF;
-    background-color: #C25100;
-}
-
-.comment {
-    margin: 20px 0px 20px 20px;
+    color: #000000;
+    background-color:#aaf0c0;
+    border-color: #aaf0c0;
 }

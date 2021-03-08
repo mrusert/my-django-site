@@ -5,9 +5,7 @@
         <aside class="actions">
             {% if user.is_authenticated %}
                 {% if post.published_date %}
-                    <div class="date">
-                        {{ post.published_date }}
-                    </div>
+                    <time class="date">{{ post.published_date }}</time>
                 {% else %}
                     <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
                 {% endif %}
@@ -27,8 +25,8 @@
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
         <div class="comment">
-            <div class="date">
-                {{ comment.created_date }}
+            <aside class="actions">
+                <time>{{ comment.created_date }}</time>
                 {% if not comment.approved_comment %}
                     <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}">
                         {% include './icons/check.svg' %}
@@ -37,7 +35,7 @@
                         {% include './icons/x.svg' %}
                     </a>
                 {% endif %}
-            </div>
+            </aside>
             <strong>{{ comment.author }}</strong>
             <p>{{ comment.text|linebreaks }}</p>
         </div>
