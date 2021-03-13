@@ -4,6 +4,7 @@ from django.utils import timezone
 
 CATEGORY = (
     ('ai', 'AI'),
+    ('crypto', 'CRYPTO'),
     ('capitalism', 'CAPITALISM'),
     ('creative writing', 'CREATIVE WRITING')
 )

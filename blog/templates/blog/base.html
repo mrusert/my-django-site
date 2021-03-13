@@ -28,6 +28,12 @@
 			</div>
 		</header>
 		<main class="container">
+			<nav>
+				<a href="{% url 'post_by_category_list' category='ai' %}" class="sidebar">AI</a>
+				<a href="{% url 'post_by_category_list' category='crypto' %}" class="sidebar">CRYPTO</a>
+				<a href="{% url 'post_by_category_list' category='capitalism' %}" class="sidebar">CAPITALISM</a>
+				<a href="{% url 'post_by_category_list' category='creative writing' %}" class="sidebar">CREATIVE WRITING</a>
+			</nav>
 			<div class="row">
 				<div class="col">
 				{% block content %}

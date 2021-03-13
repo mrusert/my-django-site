@@ -17,6 +17,10 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+def post_by_category_list(request, category):
+    posts = Post.objects.filter(category=category).order_by('created_date')
+    return render(request, 'blog/post_by_category_list.html', {'posts': posts})
+
 @login_required
 def post_new(request):
     # Check if form submission ("PUT") rather than "GET" request
